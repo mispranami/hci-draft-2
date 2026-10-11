@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crave — Food Delivery App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="phone-shell">
+    <header class="topbar">
+      <button class="icon-btn" id="backBtn" aria-label="Go back" hidden>‹</button>
+      <div class="brand"><span class="brand-mark">●</span> crave<span class="brand-dot">.</span></div>
+      <button class="text-btn" id="topAction" data-go="home">Skip</button>
+    </header>
+
+    <section class="screen active" id="welcome1">
+      <div class="onboard-art art-one"><span class="plate">🍕</span><span class="floating f1">🍅</span><span class="floating f2">🌿</span><span class="floating f3">🧀</span></div>
+      <div class="onboard-copy"><p class="eyebrow">GOOD FOOD, GOOD MOOD</p><h1>Order from your<br>favourite stores</h1><p>Discover delicious meals from the best restaurants around you.</p></div>
+      <div class="dots"><i class="chosen"></i><i></i><i></i></div>
+      <button class="primary" data-next="welcome2">Next <span>→</span></button>
+      <button class="secondary" data-go="signup">Create an account</button>
+      <p class="small-center">Already have an account? <a data-go="login">Login</a></p>
+    </section>
+
+    <section class="screen" id="welcome2">
+      <div class="onboard-art art-two"><span class="plate">🍔</span><span class="floating f1">🍟</span><span class="floating f2">🥬</span><span class="floating f3">🍅</span></div>
+      <div class="onboard-copy"><p class="eyebrow">FRESH & TASTY</p><h1>Choose from a wide<br>range of meals</h1><p>Find your cravings, explore local favourites and order in seconds.</p></div>
+      <div class="dots"><i></i><i class="chosen"></i><i></i></div>
+      <button class="primary" data-next="welcome3">Next <span>→</span></button>
+      <button class="secondary" data-go="signup">Create an account</button>
+      <p class="small-center">Already have an account? <a data-go="login">Login</a></p>
+    </section>
+
+    <section class="screen" id="welcome3">
+      <div class="onboard-art art-three"><span class="plate">🛵</span><span class="floating f1">⚡</span><span class="floating f2">🥤</span><span class="floating f3">🍔</span></div>
+      <div class="onboard-copy"><p class="eyebrow">AT YOUR DOORSTEP</p><h1>Enjoy quick delivery<br>and easy payment</h1><p>Track your order and enjoy every bite, without the wait.</p></div>
+      <div class="dots"><i></i><i></i><i class="chosen"></i></div>
+      <button class="primary" data-go="signup">Get started <span>→</span></button>
+      <button class="secondary" data-go="login">I already have an account</button>
+    </section>
+
+    <section class="screen" id="signup">
+      <div class="form-heading"><p class="eyebrow">LET'S GET STARTED</p><h1>Create an account</h1><p>Welcome friend! Enter your details to start ordering food.</p></div>
+      <form class="form" data-submit="home">
+        <label>Full name<input placeholder="Enter your name" required></label>
+        <label>Email address<input type="email" placeholder="Enter email" required></label>
+        <label>Password<input type="password" placeholder="Create password" required minlength="4"></label>
+        <label>Confirm password<input type="password" placeholder="Confirm password" required minlength="4"></label>
+        <button class="primary" type="submit">Create an account</button>
+      </form>
+      <button class="google-btn" data-go="home"><b>G</b> Continue with Google</button>
+      <p class="small-center">Already registered? <a data-go="login">Login to my account</a></p>
+    </section>
+
+    <section class="screen" id="login">
+      <div class="form-heading"><p class="eyebrow">WELCOME BACK</p><h1>Login to your account</h1><p>Good to see you again. Enter your details to continue.</p></div>
+      <form class="form" data-submit="home">
+        <label>Email address<input type="email" placeholder="Enter email" required></label>
+        <label>Password<input type="password" placeholder="Enter password" required></label>
+        <p class="right-link"><a data-go="forgot">Forgot password?</a></p>
+        <button class="primary" type="submit">Login to my account</button>
+      </form>
+      <button class="google-btn" data-go="home"><b>G</b> Sign in with Google</button>
+      <p class="small-center">New to Crave? <a data-go="signup">Create an account</a></p>
+    </section>
+
+    <section class="screen" id="forgot">
+      <div class="form-heading"><p class="eyebrow">ACCOUNT RECOVERY</p><h1>Forgot password?</h1><p>Enter your email address and we'll send you a reset code.</p></div>
+      <form class="form" data-submit="reset">
+        <label>Email address<input type="email" placeholder="Enter email address" required></label>
+        <button class="primary" type="submit">Send reset code</button>
+      </form>
+      <p class="small-center"><a data-go="login">Back to login</a></p>
+    </section>
+
+    <section class="screen" id="reset">
+      <div class="form-heading"><p class="eyebrow">VERIFY YOUR EMAIL</p><h1>Reset password</h1><p>A reset code has been sent to your email.</p></div>
+      <form class="form" data-submit="login">
+        <label>Verification code<input inputmode="numeric" maxlength="6" placeholder="• • • • • •" required></label>
+        <label>New password<input type="password" placeholder="Enter new password" required minlength="4"></label>
+        <button class="primary" type="submit">Reset password</button>
+      </form>
+      <p class="small-center"><a data-go="login">Cancel</a></p>
+    </section>
+
+    <section class="screen" id="home">
+      <div class="delivery-line"><div><span class="muted">DELIVERING TO</span><strong>⌖ Lekki Phase 1, Estate</strong></div><button class="avatar" data-go="profile">P</button></div>
+      <div class="greeting"><div><p class="eyebrow">WHAT ARE YOU CRAVING?</p><h1>Enjoy delicious food</h1></div><span class="greeting-emoji">😋</span></div>
+      <label class="search"><span>⌕</span><input id="searchInput" placeholder="Search dishes or restaurants"><button id="searchClear" type="button">☷</button></label>
+      <div class="section-title"><h2>Categories</h2><a data-go="home">See all</a></div>
+      <div class="categories">
+        <button class="category selected" data-category="All"><span>🍽️</span>All</button>
+        <button class="category" data-category="Pizza"><span>🍕</span>Pizza</button>
+        <button class="category" data-category="Burger"><span>🍔</span>Burger</button>
+        <button class="category" data-category="Sushi"><span>🍣</span>Sushi</button>
+        <button class="category" data-category="Drinks"><span>🥤</span>Drinks</button>
+      </div>
+      <div class="section-title"><h2>Popular restaurants</h2><a href="#" id="viewAll">View all</a></div>
+      <div class="restaurant-list" id="restaurantList">
+        <article class="food-card" data-name="Big cheese burger" data-category="Burger" data-go="detail"><div class="food-photo burger-photo">🍔<span class="heart">♡</span></div><div class="food-info"><div class="food-name">Big cheese burger</div><p>Big Boys Kitchen · 15–20 min</p><div class="food-meta"><span>★ 4.8</span><span>₦ 3,500</span></div></div></article>
+        <article class="food-card" data-name="Margherita pizza" data-category="Pizza" data-go="detail"><div class="food-photo pizza-photo">🍕<span class="heart">♡</span></div><div class="food-info"><div class="food-name">Margherita pizza</div><p>Oven & Co. · 20–25 min</p><div class="food-meta"><span>★ 4.7</span><span>₦ 4,200</span></div></div></article>
+        <article class="food-card" data-name="Crispy chicken meal" data-category="Burger"><div class="food-photo chicken-photo">🍗<span class="heart">♡</span></div><div class="food-info"><div class="food-name">Crispy chicken meal</div><p>Crunch House · 15–25 min</p><div class="food-meta"><span>★ 4.6</span><span>₦ 3,900</span></div></div></article>
+        <article class="food-card" data-name="Fresh berry smoothie" data-category="Drinks"><div class="food-photo drink-photo">🥤<span class="heart">♡</span></div><div class="food-info"><div class="food-name">Fresh berry smoothie</div><p>Blend Bar · 5–10 min</p><div class="food-meta"><span>★ 4.9</span><span>₦ 1,800</span></div></div></article>
+      </div>
+      <nav class="bottom-nav"><button class="nav-item active" data-go="home"><span>⌂</span>Home</button><button class="nav-item" data-go="orders"><span>▤</span>Orders</button><button class="nav-item cart-nav" data-go="cart"><span>🛒<i id="cartCount">0</i></span>Cart</button><button class="nav-item" data-go="profile"><span>☺</span>Profile</button></nav>
+    </section>
+
+    <section class="screen" id="detail">
+      <div class="detail-hero burger-photo"><span class="detail-food">🍔</span><button class="round-back" data-go="home">‹</button><button class="round-heart" id="detailHeart">♡</button></div>
+      <div class="detail-body">
+        <div class="food-meta"><span>★ 4.8 (1.2k reviews)</span><span>🔥 300 cal</span></div>
+        <h1 id="detailTitle">Big boys cheese burger</h1><p class="muted">Big Boys Kitchen · ⏱ 15–20 min</p>
+        <p class="description">A juicy, classic cheeseburger with a perfectly seasoned patty, fresh lettuce, ripe tomato and our signature sauce, served in a toasted bun.</p>
+        <div class="section-title"><h2>Choose your toppings</h2></div>
+        <label class="option-row"><span>Extra cheese <small>Make it extra cheesy</small></span><input type="checkbox" checked></label>
+        <label class="option-row"><span>Extra sauce <small>Our house special</small></span><input type="checkbox"></label>
+        <div class="add-row"><div><small>Total price</small><strong>₦ 3,500</strong></div><div class="stepper"><button id="minusQty">−</button><span id="detailQty">1</span><button id="plusQty">+</button></div></div>
+        <button class="primary" id="addToCart">Add to cart · ₦ 3,500</button>
+      </div>
+    </section>
+
+    <section class="screen" id="cart">
+      <div class="page-heading"><p class="eyebrow">ALMOST THERE</p><h1>Your cart</h1><p>Review your delicious picks.</p></div>
+      <div id="cartItems" class="cart-items"><div class="empty-cart">🛒<h3>Your cart is waiting</h3><p>Add something tasty from the home screen.</p><button class="primary" data-go="home">Explore food</button></div></div>
+      <div class="summary"><div><span>Subtotal</span><strong id="subtotal">₦ 0</strong></div><div><span>Delivery fee</span><strong id="deliveryFee">₦ 700</strong></div><div class="total"><span>Total</span><strong id="total">₦ 700</strong></div><button class="primary" id="checkoutBtn">Proceed to checkout</button></div>
+    </section>
+
+    <section class="screen" id="checkout">
+      <div class="page-heading"><p class="eyebrow">DELIVERY DETAILS</p><h1>Checkout</h1><p>Where should we bring your order?</p></div>
+      <div class="checkout-card"><span class="card-icon">⌖</span><div><small>Delivery address</small><strong>137 Teaticket Hwy, East Falmouth</strong><p>+234 901 103 9271</p></div><a href="#" id="editAddress">Change</a></div>
+      <div class="section-title"><h2>Payment method</h2></div>
+      <label class="payment-choice"><input type="radio" name="payment" value="arrival" checked><span class="pay-icon">💵</span><span><strong>Pay on arrival</strong><small>Cash or POS upon delivery</small></span></label>
+      <label class="payment-choice"><input type="radio" name="payment" value="card"><span class="pay-icon">💳</span><span><strong>Credit / debit card</strong><small>Pay securely by card</small></span></label>
+      <div class="summary"><div><span>Subtotal</span><strong id="checkoutSubtotal">₦ 0</strong></div><div><span>Delivery fee</span><strong>₦ 700</strong></div><div class="total"><span>Total</span><strong id="checkoutTotal">₦ 700</strong></div><button class="primary" id="payBtn">Place order</button></div>
+    </section>
+
+    <section class="screen" id="success">
+      <div class="success-content"><div class="success-art">✓<span>✦</span><i>✦</i></div><p class="eyebrow">ORDER CONFIRMED</p><h1>Your order has been successfully placed!</h1><p>Sit back and relax while your food is being prepared. It should arrive in about 20–30 minutes.</p><div class="order-number">ORDER ID <strong>#CRV2048</strong></div><button class="primary" data-go="orders">Track my order</button><button class="secondary" data-go="home">Back to home</button></div>
+    </section>
+
+    <section class="screen" id="orders">
+      <div class="page-heading"><p class="eyebrow">YOUR CRAVINGS, TRACKED</p><h1>Your orders</h1><p>All your recent orders in one place.</p></div>
+      <div class="order-tabs"><button class="tab active">Active</button><button class="tab">Completed</button><button class="tab">Cancelled</button></div>
+      <article class="order-card"><div class="order-emoji">🍔</div><div class="order-content"><strong>Big Boys Cheese Burger</strong><p>Order #CRV2048 · Today</p><div class="food-meta"><span class="status">● Preparing</span><strong>₦ 4,200</strong></div><button class="outline-btn" data-go="home">Order again</button></div></article>
+      <article class="order-card"><div class="order-emoji">🍕</div><div class="order-content"><strong>Margherita Pizza</strong><p>Order #CRV1942 · Yesterday</p><div class="food-meta"><span class="muted">Delivered</span><strong>₦ 4,900</strong></div><button class="outline-btn" data-go="home">Order again</button></div></article>
+      <nav class="bottom-nav"><button class="nav-item" data-go="home"><span>⌂</span>Home</button><button class="nav-item active" data-go="orders"><span>▤</span>Orders</button><button class="nav-item" data-go="cart"><span>🛒</span>Cart</button><button class="nav-item" data-go="profile"><span>☺</span>Profile</button></nav>
+    </section>
+
+    <section class="screen" id="profile">
+      <div class="profile-hero"><div class="profile-avatar">P</div><h1>Pranami</h1><p>pranami@example.com</p><button class="outline-btn" data-go="login">Edit profile</button></div>
+      <div class="profile-menu">
+        <button data-go="orders"><span>▤</span><div><strong>My orders</strong><small>Track, reorder and view history</small></div><b>›</b></button>
+        <button data-go="checkout"><span>⌖</span><div><strong>Delivery address</strong><small>Manage saved addresses</small></div><b>›</b></button>
+        <button data-go="checkout"><span>▣</span><div><strong>Payment methods</strong><small>Your cards and payment options</small></div><b>›</b></button>
+        <button data-go="profile"><span>⚙</span><div><strong>Settings</strong><small>Preferences and notifications</small></div><b>›</b></button>
+        <button data-go="profile"><span>♡</span><div><strong>Help & privacy</strong><small>Support and privacy policy</small></div><b>›</b></button>
+        <button data-go="welcome1"><span>↪</span><div><strong>Log out</strong><small>Sign out of your account</small></div><b>›</b></button>
+      </div>
+      <nav class="bottom-nav"><button class="nav-item" data-go="home"><span>⌂</span>Home</button><button class="nav-item" data-go="orders"><span>▤</span>Orders</button><button class="nav-item" data-go="cart"><span>🛒</span>Cart</button><button class="nav-item active" data-go="profile"><span>☺</span>Profile</button></nav>
+    </section>
+    <div id="toast" class="toast" role="status"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
